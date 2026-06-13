@@ -17,7 +17,10 @@ app = FastAPI()
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=[os.getenv("FRONTEND_URL", "http://localhost:8000")],
+    allow_origins=[
+    "https://autohr-funnel-frontend.yarecasst.workers.dev",
+    "http://localhost:8000",
+],
     allow_methods=["*"],
     allow_headers=["*"],
 )
